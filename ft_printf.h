@@ -7,6 +7,7 @@
 #include <stdio.h>
 
 int ft_printf(const char *format, ...);
+
 int	put_char(char c);
 int	put_str(char *str);
 int numlen(unsigned int nbr);
