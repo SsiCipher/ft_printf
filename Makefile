@@ -1,35 +1,29 @@
-LIBFT = ./libft/libft.a
+NAME = ft_printf.a
+FLAGS = -Wall -Wextra -Werror
 
-N_TEMP = temp.a
-
-NAME = libftprintf.a
-
-SRCS =  ft_printf.c \
-		ft_printf_utils.c
-		
-SURPL_O = 	ft_printf_utils.o
-
-CC = gcc
-
-FLAGS = -c -Wall -Wextra -Werror
+SRCS =	ft_printf.c \
+		numlen.c \
+		put_char.c \
+		put_hex.c \
+		put_nbr.c \
+		put_ptr.c \
+		put_str.c \
+		put_unbr.c
 
 OBJS = $(SRCS:.c=.o)
 
+all: $(NAME)
+
 $(NAME): $(OBJS)
-	$(MAKE) bonus -C ./libft
-	cp libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(SRCS)
-	ar -rcs $(NAME) $(OBJS)
 
-all : $(NAME)
+%.o: %.c ft_printf.h
+	cc $(FLAGS) -c $< -o $@
+	ar rcs $(NAME) $@
 
-clean :
-	$(MAKE) clean -C ./libft
-	rm -rf $(SURPL_O) 
+clean:
 	rm -rf $(OBJS)
 
-fclean : clean
-	$(MAKE) fclean -C ./libft
+fclean: clean
 	rm -rf $(NAME)
 
-re : fclean all
+re: fclean all
