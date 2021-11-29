@@ -6,7 +6,7 @@
 /*   By: yanab <yanab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 22:00:25 by yanab             #+#    #+#             */
-/*   Updated: 2021/11/26 22:02:55 by yanab            ###   ########.fr       */
+/*   Updated: 2021/11/29 20:41:36 by yanab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	put_ptr(unsigned long n)
 
 	i = 0;
 	base = "0123456789abcdef";
+	if (n == 0)
+		return (write(1, "0x0", 3));
 	while (n > 0)
 	{
 		result[i++] = base[n % 16];

@@ -6,7 +6,7 @@
 /*   By: yanab <yanab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 16:20:57 by yanab             #+#    #+#             */
-/*   Updated: 2021/11/29 16:20:57 by yanab            ###   ########.fr       */
+/*   Updated: 2021/11/29 20:36:22 by yanab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	numlen(unsigned int nbr)
 	int	total;
 
 	total = 0;
+	if (nbr == 0)
+		return (1);
 	while (nbr > 0)
 	{
 		total += 1;

@@ -1,4 +1,4 @@
-NAME = ft_printf.a
+NAME = libftprintf.a
 FLAGS = -Wall -Wextra -Werror
 
 SRCS =	ft_printf.c \

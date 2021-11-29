@@ -27,7 +27,7 @@ int	parse_conversion(const char *format, int i, va_list	arg_ptr)
 	else if (format[i] == 'u')
 		return (put_unbr(va_arg(arg_ptr, unsigned int)));
 	else if (format[i] == 'x' || format[i] == 'X')
-		return (put_hex(va_arg(arg_ptr, int), format[i]));
+		return (put_hex((unsigned int)va_arg(arg_ptr, int), format[i]));
 	return (0);
 }
 
