@@ -6,7 +6,7 @@
 /*   By: yanab <yanab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:59:56 by yanab             #+#    #+#             */
-/*   Updated: 2021/11/29 16:17:28 by yanab            ###   ########.fr       */
+/*   Updated: 2021/11/29 16:20:40 by yanab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ int	put_unbr(unsigned int nbr)
 		put_unbr(nbr / 10);
 	num = nbr % 10 + '0';
 	write(1, &num, 1);
-
-    return (numlen(nbr));
+	return (numlen(nbr));
 }

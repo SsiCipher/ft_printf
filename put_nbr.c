@@ -6,7 +6,7 @@
 /*   By: yanab <yanab@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:59:31 by yanab             #+#    #+#             */
-/*   Updated: 2021/11/29 16:17:02 by yanab            ###   ########.fr       */
+/*   Updated: 2021/11/29 16:20:48 by yanab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	put_nbr(int nbr)
 {
-	int num;
+	int	num;
 
 	if (nbr < 0)
 	{
@@ -32,9 +32,8 @@ int	put_nbr(int nbr)
 			put_nbr(nbr / 10);
 		num = nbr % 10 + '0';
 		write(1, &num, 1);
-    }
-    
-    if (nbr < 0)
-        return (1 + numlen(-nbr));
-    return (numlen(nbr));
+	}
+	if (nbr < 0)
+		return (1 + numlen(-nbr));
+	return (numlen(nbr));
 }
